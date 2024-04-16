@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id('user_id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('role')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -30,3 +31,14 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+
+// Schema::create('users', function (Blueprint $table) {
+//     $table->id('user_id');
+//     $table->string('username');
+//     $table->string('password');
+//     $table->string('role');
+//     $table->unsignedBigInteger('admin_id')->nullable();
+//     $table->unsignedBigInteger('pembeli_id')->nullable();
+//     $table->foreign('admin_id')->references('admin_id')->on('admin');
+//     $table->foreign('pembeli_id')->references('pembeli_id')->on('pembeli');
+// });

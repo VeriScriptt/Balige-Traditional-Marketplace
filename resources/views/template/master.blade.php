@@ -19,6 +19,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     
   </head>
+  <style>
+    .site-navbar{
+      position: fixed; 
+      width: 100%; 
+      background-color: #fff; 
+      z-index: 1000; 
+      padding-top: -1px; 
+      padding-bottom: -1px;
+    }
+  </style>
   <body>
   
   <div class="site-wrap">
@@ -59,7 +69,7 @@
           </div>
         </div>
       </div> 
-      <nav class="site-navigation text-right text-md-center" role="navigation">
+      {{-- <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li class="has-children active">
@@ -92,7 +102,7 @@
             <li><a href="{{ route('contact') }}">Contact</a></li>
           </ul>
         </div>
-      </nav>
+      </nav> --}}
     </header>
 
 
@@ -175,7 +185,7 @@
   </footer>
 </div>
 
-
+<script src="{{ asset('assets/js/cut.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>

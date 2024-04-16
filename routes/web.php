@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
 
 Route::get('/', function () {
     return view('layouts.index');
@@ -30,7 +46,7 @@ Route::get('shop', function () {
 })->name('shop');
 Route::get('shop_detail', function () {
     return view('layouts.shop_detail');
-});
+})->name('shop_detail');
 Route::get('cart', function () {
     return view('layouts.cart'); // Mengarahkan ke view 'layouts.cart'
 })->name('cart'); // Memberikan nama 'cart' pada rute ini
@@ -44,3 +60,20 @@ Route::get('thankyou', function () {
 })->name('thankyou');
 
 
+Route::resource('/produk', \App\Http\Controllers\ShowController::class);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+require __DIR__.'/auth.php';
