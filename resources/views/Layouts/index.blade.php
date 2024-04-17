@@ -223,7 +223,7 @@
                       <div class="block-4-text">
                         <a href="/shop_detail">
                         <h3>Tank Toasdasdasdasdp</h3>
-                        <p class="mb-0">Finding perfect t-shirt</p>
+                        <p class="mb-0">Finding w t-shirt</p>
                         <p class="text-primary font-weight-bold">$50</p>
                         </a>
                       </div>
