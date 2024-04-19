@@ -46,7 +46,7 @@
   </div>
 
 
-
+  <div class="jarak"></div>
   <!-- KATEGORI TANPA CAROUSEL -->
   <div class="container text-center">
     <div class="row">
@@ -214,7 +214,9 @@
           <div class="row mb-5">
             <div class="col-md-12 order-2">
               <div class="row mb-5">
-                <a href="/shop_detail" class="card-link">
+                
+                @foreach ($produk as $produks)
+                <a href="/shop_detail/{{$produks->produk_id}} class="card-link">
                   <div class="col-sm-6 col-lg-2 mb-2 px-1" data-aos="fade-up">
                     <div class="block-4 text-center border">
                       <figure class="block-4-image">
@@ -222,29 +224,34 @@
                       </figure>
                       <div class="block-4-text">
                         <a href="/shop_detail">
-                        <h3>Tank Toasdasdasdasdp</h3>
-                        <p class="mb-0">Finding w t-shirt</p>
-                        <p class="text-primary font-weight-bold">$50</p>
-                        </a>
+                        <h3>{{$produks->nama_produk}}</h3>
+                        <p class="mb-0">{{$produks->stok}}</p>
+                        <p class="text-primary font-weight-bold">{{$produks->harga}}</p>
+                      </a>
                       </div>
                     </div>
                   </div>
                 </a>
+                @endforeach
 
-                @forelse ($produk as $produks)
+                
+                {{-- @foreach ($produk as $produks)
                 <div class="col-sm-6 col-lg-2 mb-2 px-1" data-aos="fade-up">
-                  <div class="block-4 text-center border">
-                    <figure class="block-4-image">
-                      <a href="/shop_detail"><img src="images/shoe_1.jpg" alt="Image placeholder" class="img-fluid" /></a>
-                    </figure>
-                    <div class="block-4-text p-2">
-                      <h3><a href="/shop_detail">Corater</a></h3>
-                      <p class="mb-0">Finding perfect products</p>
-                      <p class="text-primary font-weight-bold">$50</p>
+                    <div class="block-4 text-center border">
+                        <figure class="block-4-image">
+                            <a href="/shop_detail/{{$produks->produk_id}}">
+                                <img src="" alt="Image placeholder" class="img-fluid" />
+                            </a>
+                        </figure>
+                        <div class="block-4-text p-2">
+                            <h3><a href="/shop_detail/{{$produks->produk_id}}">{{$produks->nama_produk}}</a></h3>
+                            <p class="mb-0">{{$produks->stok}}</p>
+                            <p class="text-primary font-weight-bold">{{$produks->harga}}</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                @endforelse
+                @endforeach --}}
+                
 
                 <div class="col-sm-6 col-lg-2 mb-2 px-1" data-aos="fade-up">
                   <div class="block-4 text-center border">

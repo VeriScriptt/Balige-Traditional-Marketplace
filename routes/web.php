@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,10 @@ Route::get('thankyou', function () {
 })->name('thankyou');
 
 
-Route::resource('/produk', \App\Http\Controllers\ShowController::class);
+// Route::get('/produk', [\App\Http\Controllers\ShowController::class,'index']);
+
+Route::resource('/', ShowController::class);
+
 
 
 

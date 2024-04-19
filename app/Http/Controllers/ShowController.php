@@ -13,9 +13,11 @@ class ShowController extends Controller
     public function index(): View
     {
         //get produks
-        $produk = Produk::latest()->paginate(5);
+        $produk = Produk::all();
 
         //render view with posts
         return view('layouts.index', compact('produk'));
+        // return view('layouts.index')->with('produk', $produk);
+
     }
 }
