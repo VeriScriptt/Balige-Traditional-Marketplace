@@ -16,10 +16,7 @@ return new class extends Migration
             // $table->unsignedBigInteger('penjual_id');
             $table->string('nama_toko');
             $table->string('nomor_toko');
-            $table->unsignedBigInteger('kategori_id');
-            $table->string('status_verifikasi');
-            // $table->foreign('penjual_id')->references('penjual_id')->on('penjual');
-            $table->foreign('kategori_id')->references('kategori_id')->on('kategori');
+
         });
     }
 

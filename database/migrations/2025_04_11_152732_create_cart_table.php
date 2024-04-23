@@ -17,9 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('produk_id');
             $table->integer('jumlah_produk');
             $table->unsignedBigInteger('transaksi_id')->nullable();
-            // $table->foreign('pembeli_id')->references('pembeli_id')->on('pembeli');
-            // $table->foreign('produk_id')->references('produk_id')->on('produk');
-            // $table->foreign('transaksi_id')->references('transaksi_id')->on('transaksi');
+
         });
     }
 

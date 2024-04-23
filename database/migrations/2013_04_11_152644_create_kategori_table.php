@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('kategori', function (Blueprint $table) {
             $table->id('kategori_id');
             $table->string('nama_kategori');
-            $table->unsignedBigInteger('admin_id');
-            $table->foreign('admin_id')->references('admin_id')->on('admin');
+
         });
     }
 

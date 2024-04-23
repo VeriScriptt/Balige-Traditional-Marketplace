@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SesiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,8 @@ Route::get('thankyou', function () {
 // Route::get('/produk', [\App\Http\Controllers\ShowController::class,'index']);
 
 Route::resource('/', ShowController::class);
+
+Route::get('rumah',[SesiController::class,'index']);
 
 
 

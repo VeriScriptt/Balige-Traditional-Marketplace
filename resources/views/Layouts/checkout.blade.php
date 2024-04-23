@@ -22,7 +22,7 @@
           <div class="col-md-6 mb-5 mb-md-0">
             <h2 class="h3 mb-3 text-black">Billing Details</h2>
             <div class="p-3 p-lg-5 border">
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label for="c_country" class="text-black">Country <span class="text-danger">*</span></label>
                 <select id="c_country" class="form-control">
                   <option value="1">Select a country</option>    
@@ -45,9 +45,9 @@
                   <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="c_lname" name="c_lname">
                 </div>
-              </div>
+              </div> --}}
 
-              <div class="form-group row">
+              {{-- <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_companyname" class="text-black">Company Name </label>
                   <input type="text" class="form-control" id="c_companyname" name="c_companyname">
@@ -98,10 +98,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
 
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label for="c_ship_different_address" class="text-black" data-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address"> Ship To A Different Address?</label>
                 <div class="collapse" id="ship_different_address">
                   <div class="py-2">
@@ -202,7 +202,7 @@
 
                 </div>
               </div>
-            </div>
+            </div> --}}
             
             <div class="row mb-5">
               <div class="col-md-12">
